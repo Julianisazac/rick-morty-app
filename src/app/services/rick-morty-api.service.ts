@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
 @Injectable({
@@ -5,5 +6,12 @@ import { Injectable } from '@angular/core';
 })
 export class RickMortyApiService {
 
-  constructor() { }
+  apiUrl: string = '';
+  constructor(private http: HttpClient) {
+    this.apiUrl = "https://rickandmortyapi.com/api/";
+  }
+
+  getCharactersList() {
+    return this.http.get(`${this.apiUrl}character`);
+  }
 }

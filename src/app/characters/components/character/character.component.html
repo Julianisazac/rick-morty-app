@@ -1,1 +1,7 @@
-<p>character works!</p>
+<div class="card">
+  <h2>Nombre: {{character.name}}</h2>
+  <p>Especie: {{character.species}}</p>
+  <p>Genero: {{character.gender}}</p>
+  <p>Ubicación: {{character.location.name}}</p>
+  <a class="button button--primary" routerLink="/detail/{{character.id}}" routerLinkActive="active" ariaCurrentWhenActive="page">Ver detalle</a>
+</div>

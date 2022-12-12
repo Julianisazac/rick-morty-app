@@ -1,1 +1,8 @@
-<p>character-list works!</p>
+<app-title></app-title>
+
+<section class="character-list">
+  <div *ngFor="let character of characterList">
+    <app-character [character]="character"></app-character>
+  </div>
+</section>
+
